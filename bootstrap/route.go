@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"api/bootstrap/routes"
+	"api/routes"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"

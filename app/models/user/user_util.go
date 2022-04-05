@@ -9,8 +9,8 @@ func IsEmailExist(email string) bool {
 	return count > 0
 }
 
-// IsPhoneExit 判断手机号码是否被注册
-func IsPhoneExit(phone string) bool {
+// IsPhoneExist 判断手机号码是否被注册
+func IsPhoneExist(phone string) bool {
 	var count int64
 	database.DB.Model(User{}).Where("phone = ?", phone).Count(&count)
 	return count > 0

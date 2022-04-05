@@ -17,6 +17,10 @@ func Connect(dbConfig gorm.Dialector, _logger gormLogger.Interface) {
 	var err error
 	DB, err = gorm.Open(dbConfig, &gorm.Config{
 		Logger: _logger,
+		// 禁用表名复数
+		//NamingStrategy: schema.NamingStrategy{
+		//	SingularTable: true,
+		//},
 	})
 
 	// 处理错误

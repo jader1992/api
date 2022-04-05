@@ -48,5 +48,11 @@ func SetupDB() {
 	database.SqlDB.SetConnMaxLifetime(time.Duration(config.GetInt("database.mysql.max_life_seconds")) *
 		time.Second)
 
-	fmt.Println(database.SqlDB)
+	//database.DB.Debug().AutoMigrate(&user.User{})
+	//database.DB.Debug().Model(user.User{}).Create(&user.User{
+	//	Name: "admin",
+	//	Email: "1249200310@qq.com",
+	//	Phone: "18042322550",
+	//	Password: "123456",
+	//})
 }
