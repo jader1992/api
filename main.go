@@ -3,7 +3,9 @@ package main
 import (
 	"api/bootstrap"
 	bstConfig "api/config"
+	"api/pkg/captcha"
 	"api/pkg/config"
+	"api/pkg/logger"
 	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -41,6 +43,9 @@ func main() {
 
 	// 初始化路由绑定
 	bootstrap.SetupRoute(r)
+
+	logger.Dump(captcha.NewCaptcha().VerifyCaptcha("9TkjJCt7QH7mBHUNHVJ2", "149765"), "正确的答案")
+	logger.Dump(captcha.NewCaptcha().VerifyCaptcha("9TkjJCt7QH7mBHUNHVJ2", "000000"), "错误的答案")
 
 	// 运行服务
 	err := r.Run(":" + config.Get("app.port"))

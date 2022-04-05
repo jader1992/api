@@ -23,6 +23,9 @@ func RegisterAPIRouters(r *gin.Engine) {
 			authGroup.POST("/signup/phone/exist", suc.IsPhoneExist)
 			// 判断 Email 是否已注册
 			authGroup.POST("/signup/email/exist", suc.IsEmailExist)
+			// 发送验证码
+			vc := new(auth.VerifyCodeController)
+			authGroup.POST("/verify-codes/captcha", vc.ShowCaptcha)
 		}
 	}
 }
