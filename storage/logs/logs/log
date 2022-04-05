@@ -60,3 +60,14 @@ net/http.(*conn).serve
 2022-04-05 22:33:26	[33mWARN[0m	api/main.go:48	dump	{"错误的答案": "false"}
 2022-04-05 22:35:00	[33mWARN[0m	api/main.go:47	dump	{"正确的答案": "true"}
 2022-04-05 22:35:00	[33mWARN[0m	api/main.go:48	dump	{"错误的答案": "false"}
+2022-04-05 22:45:48	[33mWARN[0m	api/main.go:47	dump	{"正确的答案": "true"}
+2022-04-05 22:45:48	[33mWARN[0m	api/main.go:48	dump	{"错误的答案": "false"}
+2022-04-05 22:46:17	[33mWARN[0m	api/main.go:47	dump	{"正确的答案": "true"}
+2022-04-05 22:46:17	[33mWARN[0m	api/main.go:48	dump	{"错误的答案": "false"}
+2022-04-05 22:46:58	[33mWARN[0m	user/user_util.go:15	Database Slow Log	{"sql": "SELECT count(*) FROM `users` WHERE phone = '18042322550' AND `users`.`deleted_at` IS NULL", "time": "513.379ms", "rows": 1}
+2022-04-05 22:46:58	[35mDEBUG[0m	user/user_util.go:15	database query	{"sql": "SELECT count(*) FROM `users` WHERE phone = '18042322550' AND `users`.`deleted_at` IS NULL", "time": "513.379ms", "rows": 1}
+2022-04-05 22:46:58	[35mDEBUG[0m	middlewares/logger.go:76	HTTP Access log	{"status": 200, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "514.517ms", "Request body": "", "Response Body": "{\"exist\":true}"}
+2022-04-05 22:47:01	[35mDEBUG[0m	user/user_util.go:15	database query	{"sql": "SELECT count(*) FROM `users` WHERE phone = '18042322550' AND `users`.`deleted_at` IS NULL", "time": "47.553ms", "rows": 1}
+2022-04-05 22:47:01	[35mDEBUG[0m	middlewares/logger.go:76	HTTP Access log	{"status": 200, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "47.837ms", "Request body": "", "Response Body": "{\"exist\":true}"}
+2022-04-05 22:47:11	[35mDEBUG[0m	user/user_util.go:8	database query	{"sql": "SELECT count(*) FROM `users` WHERE email = '1249200310@qq.com' AND `users`.`deleted_at` IS NULL", "time": "128.975ms", "rows": 1}
+2022-04-05 22:47:11	[35mDEBUG[0m	middlewares/logger.go:76	HTTP Access log	{"status": 200, "request": "POST /v1/auth/signup/email/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "129.386ms", "Request body": "", "Response Body": "{\"exist\":true}"}

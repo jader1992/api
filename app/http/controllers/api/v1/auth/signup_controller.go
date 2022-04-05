@@ -4,8 +4,8 @@ import (
 	v1 "api/app/http/controllers/api/v1"
 	"api/app/models/user"
 	"api/app/requests"
+	"api/pkg/response"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 // SignupController 注册控制器
@@ -22,7 +22,7 @@ func (sign *SignupController) IsPhoneExist(c *gin.Context) {
 	}
 
 	//  检查数据库并返回响应
-	c.JSON(http.StatusOK, gin.H{
+	response.JSON(c, gin.H{
 		"exist": user.IsPhoneExist(request.Phone),
 	})
 }
@@ -36,7 +36,7 @@ func (sign *SignupController) IsEmailExist(c *gin.Context) {
 	}
 
 	// 检查数据库并返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"exists": user.IsEmailExist(request.Email),
+	response.JSON(c, gin.H{
+		"exist": user.IsEmailExist(request.Email),
 	})
 }
