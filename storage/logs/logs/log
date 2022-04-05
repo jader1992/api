@@ -1,0 +1,51 @@
+2022-04-05 17:03:55	[34mINFO[0m	runtime/proc.go:255	ceshi
+2022-04-05 17:29:42	[34mINFO[0m	api/main.go:30	INFO	{"ceshi": "未定义"}
+2022-04-05 17:30:44	[34mINFO[0m	api/main.go:30	INFO	{"ceshi": "未定义"}
+2022-04-05 17:30:44	[33mWARN[0m	api/main.go:31	INFO	{"ceshi": "未定义"}
+2022-04-05 17:32:19	[34mINFO[0m	api/main.go:30	INFO	{"ceshi": "未定义"}
+2022-04-05 17:32:19	[33mWARN[0m	api/main.go:31	WARN	{"ceshi": "{\"hello\":\"world\"}"}
+2022-04-05 18:24:55	[33mWARN[0m	middlewares/logger.go:71	HTTP Warning:422	{"status": 422, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "1.873ms", "Request body": "", "Response Body": "{\"errors\":{\"phone\":[\"手机号长度必须为11位的数字\"]},\"message\":\"请求验证不通过，具体请查看 errors\"}"}
+2022-04-05 18:28:46	[33mWARN[0m	middlewares/logger.go:74	HTTP Warning:422	{"status": 422, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "0.134ms", "Request body": "", "Response Body": "{\"error\":\"invalid character '-' in numeric literal\",\"message\":\"请求解析错误，请确认请求格式是否正确。上传文件请使用 multipart 标头，参数请使用 JSON 格式。\"}"}
+2022-04-05 18:29:01	[33mWARN[0m	middlewares/logger.go:74	HTTP Warning:422	{"status": 422, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "0.349ms", "Request body": "", "Response Body": "{\"errors\":{\"phone\":[\"手机号长度必须为11位的数字\"]},\"message\":\"请求验证不通过，具体请查看 errors\"}"}
+2022-04-05 18:30:28	[33mWARN[0m	middlewares/logger.go:76	HTTP Warning:422	{"status": 422, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "0.357ms", "Request body": "", "Response Body": "{\"errors\":{\"phone\":[\"手机号长度必须为11位的数字\"]},\"message\":\"请求验证不通过，具体请查看 errors\"}"}
+2022-04-05 18:47:14	[31mERROR[0m	middlewares/recovery.go:48	recovery from panic	{"time": "2022-04-05 18:47:14", "error": "这是 panic 测试", "request": "POST /v1/auth/signup/phone/exist HTTP/1.1\r\nHost: localhost:3000\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nCache-Control: no-cache\r\nConnection: keep-alive\r\nContent-Length: 28\r\nContent-Type: application/json\r\nPostman-Token: 92b3fc22-fd0b-4e29-9555-c27bdd83f08d\r\nUser-Agent: PostmanRuntime/7.28.4\r\n\r\n{\n    \"phone\":\"1804232250\"\n}", "stacktrace": "api/app/middlewares.Recovery.func1.1\n\t/Users/jade/Desktop/go/api/app/middlewares/recovery.go:52\nruntime.gopanic\n\t/usr/local/go/src/runtime/panic.go:1038\napi/app/http/controllers/api/v1/auth.(*SignupController).IsPhoneExist\n\t/Users/jade/Desktop/go/api/app/http/controllers/api/v1/auth/signup_controller.go:19\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\napi/app/middlewares.Recovery.func1\n\t/Users/jade/Desktop/go/api/app/middlewares/recovery.go:61\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\napi/app/middlewares.Logger.func1\n\t/Users/jade/Desktop/go/api/app/middlewares/logger.go:45\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest\n\t/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP\n\t/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511\nnet/http.serverHandler.ServeHTTP\n\t/usr/local/go/src/net/http/server.go:2878\nnet/http.(*conn).serve\n\t/usr/local/go/src/net/http/server.go:1929"}
+api/app/middlewares.Recovery.func1.1
+	/Users/jade/Desktop/go/api/app/middlewares/recovery.go:48
+runtime.gopanic
+	/usr/local/go/src/runtime/panic.go:1038
+api/app/http/controllers/api/v1/auth.(*SignupController).IsPhoneExist
+	/Users/jade/Desktop/go/api/app/http/controllers/api/v1/auth/signup_controller.go:19
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+api/app/middlewares.Recovery.func1
+	/Users/jade/Desktop/go/api/app/middlewares/recovery.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+api/app/middlewares.Logger.func1
+	/Users/jade/Desktop/go/api/app/middlewares/logger.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1929
+2022-04-05 18:47:14	[31mERROR[0m	middlewares/logger.go:74	HTTP Error 500	{"status": 500, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "12.058ms", "Request body": "", "Response Body": "{\"message\":\"服务器内部错误，请稍后再试\"}"}
+api/app/middlewares.Logger.func1
+	/Users/jade/Desktop/go/api/app/middlewares/logger.go:74
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/jade/Desktop/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2878
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1929
+2022-04-05 19:36:07	[33mWARN[0m	middlewares/logger.go:71	HTTP Warning:422	{"status": 422, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "0.532ms", "Request body": "", "Response Body": "{\"errors\":{\"phone\":[\"手机号长度必须为11位的数字\"]},\"message\":\"请求验证不通过，具体请查看 errors\"}"}
+2022-04-05 19:37:02	[35mDEBUG[0m	user/user_util.go:15	database query	{"sql": "SELECT count(*) FROM `users` WHERE phone = '18042322550' AND `users`.`deleted_at` IS NULL", "time": "191.710ms", "rows": 1}
+2022-04-05 19:37:02	[35mDEBUG[0m	middlewares/logger.go:76	HTTP Access log	{"status": 200, "request": "POST /v1/auth/signup/phone/exist", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.28.4", "errors": "", "time": "199.865ms", "Request body": "", "Response Body": "{\"exist\":true}"}

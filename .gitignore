@@ -42,6 +42,7 @@ _cgo_export.*
 *.log
 *.sqlite
 *.db
+storage/logs/*
 
 # 临时文件 #
 ######################

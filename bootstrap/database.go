@@ -3,12 +3,13 @@ package bootstrap
 import (
 	"api/pkg/config"
 	"api/pkg/database"
+	"api/pkg/logger"
 	"errors"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
+	//"gorm.io/gorm/logger"
 	"time"
 )
 
@@ -38,7 +39,8 @@ func SetupDB() {
 	}
 
 	// 连接数据库
-	database.Connect(dbConfig, logger.Default.LogMode(logger.Info))
+	//database.Connect(dbConfig, logger.Default.LogMode(logger.Info))
+	database.Connect(dbConfig, logger.NewGormLogger())
 
 	// 设置最大连接数
 	database.SqlDB.SetMaxOpenConns(config.GetInt("database.mysql.max_open_connections"))
